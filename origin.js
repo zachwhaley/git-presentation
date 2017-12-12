@@ -13,3 +13,5 @@ var origin = git.branch({
   }
 })
 git.commit()
+git.commit()
+git.commit()
