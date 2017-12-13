@@ -4,21 +4,36 @@ var git = new GitGraph({
   mode: "compact"
 })
 
-var origin = git.branch({
-  name: 'remotes/origin/master',
-  color: "red",
+var server = git.branch({
+  name: 'server',
+  color: 'black',
   commitDefaultOptions: {
-    color: "red"
+    color: 'black'
   }
 })
-origin.commit()
-origin.commit()
-origin.commit()
+var init = server.commit({dotSize: 5})
 
-origin.commit()
-origin.commit()
+var remote = server.branch({
+  name: 'origin/master',
+  color: 'red',
+  commitDefaultOptions: {
+    color: 'red'
+  }
+})
 
-var master = git.branch({
+remote.commit()
+server.commit()
+
+remote.commit()
+server.commit()
+
+remote.commit()
+server.commit()
+
+remote.commit()
+server.commit()
+
+var master = remote.branch({
   name: 'master',
   color: "#979797",
   commitDefaultOptions: {
@@ -26,3 +41,8 @@ var master = git.branch({
   }
 })
 master.commit()
+
+server.commit()
+remote.commit()
+
+remote.merge(master)
