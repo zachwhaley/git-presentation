@@ -12,6 +12,8 @@ var origin = git.branch({
   }
 })
 origin.commit()
+origin.commit()
+origin.commit()
 
 var master = git.branch({
   name: 'master',
@@ -21,5 +23,3 @@ var master = git.branch({
   }
 })
 master.commit()
-origin.commit()
-origin.commit()
