@@ -15,6 +15,9 @@ origin.commit()
 origin.commit()
 origin.commit()
 
+origin.commit()
+origin.commit()
+
 var master = git.branch({
   name: 'master',
   color: "#979797",
